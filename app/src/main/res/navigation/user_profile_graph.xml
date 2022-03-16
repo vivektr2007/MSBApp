@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_profile_graph"
+    app:startDestination="@id/userProfileMainFragment">
+
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.msb.presentation.main.userprofile.UserProfileFragment"
+        android:label=""
+        tools:layout="@layout/user_profile_fragment"/>
+    <fragment
+        android:id="@+id/anonymousUserProfileFragment"
+        android:name="com.msb.presentation.main.userprofile.AnonymousUserProfileFragment"
+        android:label=""
+        tools:layout="@layout/anonymous_user_profile_fragment" />
+    <fragment
+        android:id="@+id/userProfileMainFragment"
+        android:name="com.msb.presentation.main.userprofile.UserProfileMainFragment"
+        android:label=""
+        tools:layout="@layout/user_profile_main_fragment">
+        <action
+            android:id="@+id/action_userProfileMainFragment_to_anonymousUserProfileFragment"
+            app:destination="@id/anonymousUserProfileFragment" />
+        <action
+            android:id="@+id/action_userProfileMainFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_userProfileMainFragment_to_changePasswordFragment1"
+            app:destination="@id/changePasswordFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeMsbpinSuccessFragment"
+        android:name="com.msb.presentation.authorization.success.ChangeMsbpinSuccessFragment"
+        android:label="Change Msbpin Success"
+        tools:layout="@layout/change_msbpin_success_fragment" >
+        <action
+            android:id="@+id/action_changeMsbpinSuccessFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment1"
+        android:name="com.msb.presentation.authorization.forgotpassword.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/change_password_fragment">
+
+        <action
+            android:id="@+id/action_changePasswordFragment_to_changeMsbpinSuccessFragment"
+            app:destination="@id/changeMsbpinSuccessFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/login_fragment"
+        android:id="@+id/loginFragment2"
+        android:name="com.msb.presentation.authorization.login.LoginFragment"
+        android:label="Login" />
+</navigation>

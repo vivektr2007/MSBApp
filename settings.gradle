@@ -1,0 +1,10 @@
+rootProject.name = "MSB"
+include ':app'
+include ':core'
+include ':sociallogin'
+include ':sociallogin:googleAuth'
+include ':sociallogin:facebookAuth'
+include ':inAppUpdate'
+include ':utils'
+include ':network'
+include ':database'

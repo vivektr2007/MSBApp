@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.authorization.signup.RegisterUserFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/createAccountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Create Account"
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/toProceedsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Please enter your credentials to proceeds"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/createAccountTv"
+                app:layout_constraintTop_toBottomOf="@+id/createAccountTv" />
+
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/layout2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/toProceedsTv">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutEnterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:theme="@style/AppTheme.TextInputLayoutAppearanceLogin"
+                    app:hintTextAppearance="@style/HintText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:maxLength="80"
+                        android:maxLines="1"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/layout1"
+                app:layout_constraintStart_toStartOf="@+id/layout1"
+                app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+            </View>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/layout1"
+                app:layout_constraintStart_toStartOf="@+id/layout1"
+                app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:theme="@style/AppTheme.TextInputLayoutAppearanceLogin"
+                    app:hintTextAppearance="@style/HintText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Email ID"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="80"
+                        android:maxLines="1"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/layout2"
+                app:layout_constraintStart_toStartOf="@+id/layout2"
+                app:layout_constraintTop_toBottomOf="@+id/layout2">
+
+            </View>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/layout2"
+                app:layout_constraintStart_toStartOf="@+id/layout2"
+                app:layout_constraintTop_toBottomOf="@+id/layout2">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:ccpDialog_allowSearch="true"
+                    app:ccpDialog_cornerRadius="8dp"
+                    app:ccpDialog_keyboardAutoPopup="true"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_countryPreference="in,us,nz,gb"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccp_padding="0dp"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:theme="@style/AppTheme.TextInputLayoutAppearanceLogin"
+                    app:hintTextAppearance="@style/HintText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneNumberEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Phone No."
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/layout3"
+                app:layout_constraintStart_toStartOf="@+id/layout3"
+                app:layout_constraintTop_toBottomOf="@+id/layout3">
+
+            </View>
+
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/layout3"
+                app:layout_constraintStart_toStartOf="@+id/layout3"
+                app:layout_constraintTop_toBottomOf="@+id/layout3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutMsbpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:theme="@style/AppTheme.TextInputLayoutAppearanceLogin"
+                    app:hintTextAppearance="@style/HintText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="MSBPIN"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/layout4"
+                app:layout_constraintStart_toStartOf="@+id/layout4"
+                app:layout_constraintTop_toBottomOf="@+id/layout4">
+
+            </View>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/layout4"
+                app:layout_constraintStart_toStartOf="@+id/layout4"
+                app:layout_constraintTop_toBottomOf="@+id/layout4">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutConfirmMsbpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:theme="@style/AppTheme.TextInputLayoutAppearanceLogin"
+                    app:hintTextAppearance="@style/HintText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Confirm MSBPIN"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/layout5"
+                app:layout_constraintStart_toStartOf="@+id/layout5"
+                app:layout_constraintTop_toBottomOf="@+id/layout5">
+
+            </View>
+
+            <Button
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_bg_gradient"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/layout5"
+                app:layout_constraintStart_toStartOf="@+id/layout5"
+                app:layout_constraintTop_toBottomOf="@+id/layout5"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/btnGoToLogin"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/btnbg"
+                android:text="Already have an account ? Login Now"
+                android:textAllCaps="false"
+                android:textColor="@color/appColor"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnCreateAccount"
+                app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
+                app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

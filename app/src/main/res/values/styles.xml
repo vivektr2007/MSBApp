@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="ErrorText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/logo_o</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="HintText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+    <style name="popupTheme" parent="Theme.AppCompat.Light">
+
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppTheme.TextInputLayoutAppearanceOld" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="colorControlNormal">@color/divider</item>
+        <item name="colorControlActivated">@color/text_blues</item>
+        <item name="colorControlHighlight">@color/text_blues</item>
+        <item name="android:textSize">13sp</item>
+
+    </style>
+
+    <style name="AppTheme.TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/divider</item>
+        <item name="colorControlActivated">@color/secondary_text</item>
+        <item name="colorControlHighlight">@color/secondary_text</item>
+        <item name="android:textSize">13sp</item>
+
+    </style>
+
+    <style name="AppTheme.TextInputLayoutAppearanceWhite" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textSize">13sp</item>
+
+    </style>
+
+
+    <style name="popupMenuStyle" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:popupBackground">@color/dot_inactive</item>
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textSize">10sp</item>
+        <!--        <item name="android:background">#ffffff</item>-->
+    </style>
+
+
+    <style name="Theme_Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="Theme_Custom_Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/logo_p</item>
+        <item name="android:colorAccent">@color/logo_p</item>
+    </style>
+
+    <style name="AppSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+    <style name="AppSwitch2" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/logo_e</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/logo_o</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/logo_o</item>
+    </style>
+
+    <style name="AppTheme.Button1" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/logo_p</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10sp</item>
+    </style>
+    <style name="AppTheme.TextInputLayoutAppearanceLogin" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/secondary_text</item>
+        <item name="colorControlActivated">@color/secondary_text</item>
+        <item name="colorControlHighlight">@color/secondary_text</item>
+        <item name="android:textSize">13sp</item>
+
+
+    </style>
+    <style name="AppTheme.Button2" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/logo_p</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="AppTheme.Button3" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/white</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="AppTheme.Button4" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/secondary_text</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:padding">10sp</item>
+    </style>
+
+    <style name="AppTheme.Button5" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/divider</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:padding">10sp</item>
+    </style>
+
+    <style name="AppTheme.Button6" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/divider</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="AppTheme.ButtonDialogPositive" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="colorButtonNormal">@color/accent</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/logo_p</item>
+    </style>
+
+    <style name="AppTheme.ButtonDialogNegative" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
+
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--        <item name="colorPrimary">@color/primaryColor</item>-->
+        <!--        <item name="colorPrimaryDark">@color/primaryColorDark</item>-->
+        <item name="colorAccent">@color/logo_p</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!--        <item name="colorControlNormal">@color/secondary_text</item>-->
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorButtonNormal">@color/logo_p</item>
+        <!--        <item name="actionMenuTextColor">@color/white</item>-->
+        <item name="popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="android:popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="elevation">0dp</item>
+
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
+        <item name="colorControlNormal">@color/primary_text</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+    </style>
+    <style name="LightTheme" parent="Theme.AppCompat.Light">
+        <!--   color for the app bar -->
+        <item name="colorPrimary">@color/white</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/white</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/logo_p</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!--        <item name="colorControlNormal">@color/secondary_text</item>-->
+        <item name="colorControlActivated">@color/color_clicked</item>
+        <item name="colorControlHighlight">@color/color_clicked</item>
+        <item name="colorButtonNormal">@color/logo_p</item>
+        <!--        <item name="actionMenuTextColor">@color/white</item>-->
+        <item name="popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="android:popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="elevation">0dp</item>
+
+
+    </style>
+
+
+    <style name="MyRandomTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
+
+        <item name="android:textColorSecondary">@color/primary_text</item>
+
+        <item name="colorControlNormal">@color/primary_text</item>
+
+    </style>
+
+
+    <style name="ToolbarTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/primary_text</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">35sp</item>
+        <item name="titleTextAppearance">@style/Toolbar.TitleText</item>
+
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="MyTab" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="AppTheme.Progressbar" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorControlNormal">@color/logo_p</item>
+        <item name="colorControlActivated">@color/logo_p</item>
+        <item name="colorControlHighlight">@color/logo_p</item>
+        <item name="colorAccent">@color/logo_p</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/logo_p</item>
+        <item name="android:textColorPrimary">@color/secondary_text</item>
+        <item name="android:background">@color/primary_light</item>
+
+    </style>
+
+
+    <style name="vw_FilePickerTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--        <item name="colorAccent">@color/colorAccent</item>-->
+
+        <item name="actionOverflowMenuStyle">@style/vw_OverflowMenuStyle</item>
+
+    </style>
+
+    <style name="vw_OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:popupBackground">#000000</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+    </style>
+
+    <style name="vw_ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textSize">16sp</item> <!-- 字体大小 -->
+    </style>
+
+    <declare-styleable name="MaxHeightLayout">
+        <attr name="mhl_HeightRatio" format="reference|float" />
+        <attr name="mhl_HeightDimen" format="reference|dimension" />
+    </declare-styleable>
+
+    <style name="PopupMenu" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:popupElevation">0dp</item>
+    </style>
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+</resources>

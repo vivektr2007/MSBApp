@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.msb.presentation.main.dashboard.DashboardFragment"
+        android:label="dashboard_fragment"
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_dashboardFragment_to_storyViewerActivity"
+            app:destination="@id/storyViewerActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.msb.presentation.main.chat.ChatListFragment"
+        android:label="ChatListFragment"
+        tools:layout="@layout/chat_list_fragment">
+        <action
+            android:id="@+id/action_chatListFragment_to_chatMessagesActivity"
+            app:destination="@id/chatMessagesActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/chatMessagesActivity"
+        android:name="com.msb.presentation.main.chat.chatMessages.ChatMessagesActivity"
+        android:label="ChatMessagesActivity"
+        tools:layout="@layout/activity_chat_messages" />
+    <fragment
+        android:id="@+id/datingListFragment"
+        android:name="com.msb.presentation.main.dating.dating_list.DatingListFragment"
+        android:label="dating_list_fragment"
+        tools:layout="@layout/dating_list_fragment">
+        <action
+            android:id="@+id/action_datingListFragment_to_matchActivity"
+            app:destination="@id/matchActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/matchActivity"
+        android:name="com.msb.presentation.main.dating.match.MatchActivity"
+        android:label="MatchFragment"
+        tools:layout="@layout/activity_match" />
+    <activity
+        android:id="@+id/storyViewerActivity"
+        android:name="com.msb.presentation.main.story.StoryViewerActivity"
+        android:label="StoryViewerActivity"
+        tools:layout="@layout/activity_story_viewer" />
+</navigation>
